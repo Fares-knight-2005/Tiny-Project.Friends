@@ -1,0 +1,48 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\Wedding-Condolence-etc  Hall Management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0B29215E-7B47-412D-9906-EED285E71242}|..\\DataAccess\\DataAccess.csproj|d:\\coding files\\projects\\tiny project.friends\\tiny-project.friends\\src\\dataaccess\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\DataAccess\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\Class1.cs",
+              "ToolTip": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\DataAccess\\Class1.cs",
+              "RelativeToolTip": "..\\DataAccess\\Class1.cs",
+              "ViewState": "AgIAAAwBAAAAAAAAAAAcwBEBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T05:29:42.81Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
