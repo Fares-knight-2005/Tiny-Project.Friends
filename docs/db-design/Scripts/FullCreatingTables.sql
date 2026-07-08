@@ -1,3 +1,27 @@
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'Hall_Booking')
+BEGIN
+    CREATE DATABASE Hall_Booking;
+END
+GO
+Drop Table IF Exists INVENTORY;
+
+Drop Table IF Exists MATERIALS;
+
+Drop Table IF Exists BOOKING_SERVICES;
+
+Drop Table IF Exists BOOKING;
+
+Drop Table IF Exists SERVICES;
+
+Drop Table IF Exists TYPES;
+
+Drop Table IF Exists STATUS;
+
+Drop Table IF Exists CUSTOMERS;
+
+
+
+Use [Hall_Booking];
 
 CREATE TABLE CUSTOMERS (
     CustomerID INT IDENTITY(1,1) PRIMARY KEY,

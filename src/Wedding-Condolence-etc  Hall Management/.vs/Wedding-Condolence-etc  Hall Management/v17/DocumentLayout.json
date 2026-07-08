@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\Wedding-Condolence-etc  Hall Management\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0B29215E-7B47-412D-9906-EED285E71242}|..\\DataAccess\\DataAccess.csproj|d:\\coding files\\projects\\tiny project.friends\\tiny-project.friends\\src\\dataaccess\\materialtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0B29215E-7B47-412D-9906-EED285E71242}|..\\DataAccess\\DataAccess.csproj|d:\\coding files\\projects\\tiny project.friends\\tiny-project.friends\\src\\dataaccess\\custmersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,12 +33,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MaterialTable.cs",
+              "DocumentMoniker": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\DataAccess\\MaterialTable.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\MaterialTable.cs",
+              "ToolTip": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\DataAccess\\MaterialTable.cs",
+              "RelativeToolTip": "..\\DataAccess\\MaterialTable.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-05T14:44:39.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CustmersRepository.cs",
               "DocumentMoniker": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\DataAccess\\CustmersRepository.cs",
               "RelativeDocumentMoniker": "..\\DataAccess\\CustmersRepository.cs",
               "ToolTip": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\DataAccess\\CustmersRepository.cs",
               "RelativeToolTip": "..\\DataAccess\\CustmersRepository.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAgAAABzAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAgAAABzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-02T05:29:42.81Z",
               "EditorCaption": ""
