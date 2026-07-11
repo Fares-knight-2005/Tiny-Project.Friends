@@ -2,11 +2,11 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
 
-namespace DataCase
+namespace DataAccess
 {
     public class Status
     {
-        private static string connectionString = "Server = .;Database = [DBName];User Id = sa; Password = 123456;";
+        private static string connectionString = "Server = .;Database = Hall_Booking;User Id = sa; Password = 123456;";
 
         public static int AddNewStatus (string StatusName)
         {
