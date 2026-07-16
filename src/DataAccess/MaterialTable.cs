@@ -5,7 +5,7 @@ using Microsoft.Data.SqlClient;
 namespace DataAccess
 {
     public class MaterialRepository {
-        private static string connectionString = "Server = .;Database=[DBName];User Id = sa ;Password =123456;";
+        private static string connectionString = "Server = .;Database=Hall_Booking;User Id = sa ;Password =123456;";
 
         public static int AddNewMaterial(string MaterialName, int? FullPiecesByKgOrQuantity, int? LessPiecesByKgOrQuantity)
         {
