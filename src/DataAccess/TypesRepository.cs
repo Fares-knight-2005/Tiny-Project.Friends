@@ -8,7 +8,7 @@ namespace DataAccess
         private static string connectionString = "Server = .;Database=Hall_Booking;User Id = sa ;Password =123456;";
         public static string GetReservationTypeByID(int TypeID)
         {
-            string typeResult = "";
+            string typeResult? = "";
             SqlConnection connect = new SqlConnection(connectionString);
             string query = "SELECT Type_Name FROM TYPES WHERE Type_ID = @TypeID;";
             SqlCommand command = new SqlCommand(query, connect);
@@ -16,7 +16,7 @@ namespace DataAccess
             try
             {
                 connect.Open();
-                object result = command.ExecuteScalar();
+                object result = command.ExecuteReader();
 
                 if (result != null)
                 {
@@ -64,7 +64,7 @@ namespace DataAccess
             try
             {
                 connect.Open();
-                int rowsAffected = command.ExecuteNonQuery();
+                int rowsAffected = command.ExecuteScalar();
                 if (rowsAffected > 0)
                 {
                     isAdded = true;
