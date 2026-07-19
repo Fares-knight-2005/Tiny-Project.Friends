@@ -27,7 +27,7 @@ namespace DataAccess
                 cmd.Parameters.AddWithValue("@Description", Description);
             else
                 cmd.Parameters.AddWithValue("@Description", DBNull.Value);
-            
+
 
             cmd.Parameters.AddWithValue("@TotalPrice", TotalPrice);
             cmd.Parameters.AddWithValue("@PaidPrice", PaidPrice);
@@ -68,7 +68,7 @@ namespace DataAccess
                 cmd.Parameters.AddWithValue("@Description", Description);
             else
                 cmd.Parameters.AddWithValue("@Description", DBNull.Value);
-            
+
 
             cmd.Parameters.AddWithValue("@TotalPrice", TotalPrice);
             cmd.Parameters.AddWithValue("@PaidPrice", PaidPrice);
@@ -162,3 +162,4 @@ namespace DataAccess
             return dataTable;
         }
     }
+}
