@@ -2,7 +2,7 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
 
-namespace DataAccess
+namespace DataAccess.Repositories
 {
     public class Booking
     {
@@ -83,7 +83,7 @@ namespace DataAccess
             }
             catch (Exception) { }
             finally { conn.Close(); }
-            return (effectedRows > 0);
+            return effectedRows > 0;
         }
 
         public static bool DeleteBooking(int BookingID)

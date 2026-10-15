@@ -2,7 +2,7 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
 
-namespace DataAccess
+namespace DataAccess.Repositories
 {
     public class Status
     {
@@ -46,7 +46,7 @@ namespace DataAccess
             }
             catch (Exception) { }
             finally { conn.Close(); }
-            return (effectedRows > 0);
+            return effectedRows > 0;
         }
 
         public static bool DeleteStatus(int StatusID)

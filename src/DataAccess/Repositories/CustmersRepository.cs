@@ -2,7 +2,7 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
 
-namespace DataAccess
+namespace DataAccess.Repositories
 {
     public class CustomersRepository
     {
@@ -70,7 +70,7 @@ namespace DataAccess
             }
             catch (Exception) { }
             finally { conn.Close(); }
-            return (effectedRows > 0);
+            return effectedRows > 0;
         }
 
         public static bool DeleteCustomer(int CustomerID)

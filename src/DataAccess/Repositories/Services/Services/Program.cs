@@ -2,24 +2,23 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
 
-namespace DataAccess
-{
-    public class Booking
-    {
-        private static string connectionString = "Server = .;Database = Hall_Booking;User Id = sa; Password = 123456;";
 
-        public static int AddNewBookingService(int BookingID, int ServiceID, int DetailID, Decimal price)
+
+namespace DataAccess.Repositories.Services.Services
+{
+    public class Status
+    {
+        private static string connectionString = "Server = .;Database = [DBName];User Id = sa; Password = 123456;";
+
+        public static int AddNewService(string ServiceName , float ServicePrice)
         {
             int ID = -1;
             SqlConnection con = new SqlConnection(connectionString);
-            string query = "Insert into BOOKING_SERVICES(BookingID, ServiceID, DetailID, Price) " +
-                           "values(@BookingID, @ServiceID, @DetailID, @Price); select Scope_Identity();";
+            string query = "Insert into SERVICES(ServiceName, ServicePrice) " +
+                           "values(@ServiceName, @ServicePrice); select Scope_Identity();";
             SqlCommand cmd = new SqlCommand(query, con);
-
-            cmd.Parameters.AddWithValue("@BookingID", BookingID);
-            cmd.Parameters.AddWithValue("@ServiceID", ServiceID);
-            cmd.Parameters.AddWithValue("@DetailID", DetailID);
-            cmd.Parameters.AddWithValue("@Price", price);
+            cmd.Parameters.AddWithValue("@ServiceName", ServiceName);
+            cmd.Parameters.AddWithValue("@ServicePrice", ServicePrice);
             try
             {
                 con.Open();
@@ -34,18 +33,15 @@ namespace DataAccess
             return ID;
         }
 
-
-        public static bool UpdateBookingService(int BookingID, int ServiceID, int DetailID, Decimal price)
+        public static bool UpdateService(int ServiceID, string ServiceName, float ServicePrice)
         {
             SqlConnection conn = new SqlConnection(connectionString);
-            string query = "Update BOOKING_SERVICES set ServiceID = @ServiceID, DetailID = @DetailID, Price = @Price " +
-                           "where BookingID = @BookingID";
+            string query = "Update SERVICES set (ServiceName = @ServiceName, ServicePrice = @ServicePrice) " +
+                "where ServiceID = @ServiceID";
             SqlCommand cmd = new SqlCommand(query, conn);
-
-            cmd.Parameters.AddWithValue("@BookingID", BookingID);
             cmd.Parameters.AddWithValue("@ServiceID", ServiceID);
-            cmd.Parameters.AddWithValue("@DetailID", DetailID);
-            cmd.Parameters.AddWithValue("@Price", price);
+            cmd.Parameters.AddWithValue("@ServiceName", ServiceName);
+            cmd.Parameters.AddWithValue("@ServicePrice", ServicePrice);
             int effectedRows = 0;
             try
             {
@@ -54,15 +50,15 @@ namespace DataAccess
             }
             catch (Exception) { }
             finally { conn.Close(); }
-            return (effectedRows > 0);
+            return effectedRows > 0;
         }
 
-        public static bool DeleteBookingService(int BookingID)
+        public static bool DeleteService(int ServiceID)
         {
             SqlConnection conn = new SqlConnection(connectionString);
-            string query = "Delete From BOOKING_SERVICES Where BookingID = @BookingID";
+            string query = "Delete From SERVICES Where ServiceID = @ServiceID";
             SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@BookingID", BookingID);
+            cmd.Parameters.AddWithValue("@ServiceID", ServiceID);
             bool IsDeleted = false;
             try
             {
@@ -75,11 +71,11 @@ namespace DataAccess
             return IsDeleted;
         }
 
-        public static DataTable GetAllBookingServices()
+        public static DataTable GetAllServices()
         {
             DataTable dataTable = new DataTable();
             SqlConnection con = new SqlConnection(connectionString);
-            string query = "Select * from BOOKING_SERVICES";
+            string query = "Select * from SERVICES";
             SqlCommand command = new SqlCommand(query, con);
             try
             {
@@ -93,12 +89,12 @@ namespace DataAccess
             return dataTable;
         }
 
-        public static bool IsBookingExistByBookingID(int BookingID)
+        public static bool IsServiceExistByServiceID(int ServiceID)
         {
             SqlConnection con = new SqlConnection(connectionString);
-            string Query = "Select found = 1 from BOOKING_SERVICES where BookingID = @BookingID";
+            string Query = "Select found = 1 from SERVICES where ServiceID = @ServiceID";
             SqlCommand command = new SqlCommand(Query, con);
-            command.Parameters.AddWithValue("@BookingID", BookingID);
+            command.Parameters.AddWithValue("@ServiceID", ServiceID);
             bool isFound = false;
             try
             {
@@ -112,25 +108,26 @@ namespace DataAccess
             return isFound;
         }
 
-        public static DataTable GetBookingServiceByID(int BookingID)
+        public static bool IsServiceExistByName(string ServiceName)
         {
-            DataTable dataTable = new DataTable();
             SqlConnection con = new SqlConnection(connectionString);
-            string query = "Select * from BOOKING_SERVICES where BookingID = @BookingID";
-            SqlCommand command = new SqlCommand(query, con);
-            command.Parameters.AddWithValue("@BookingID", BookingID);
-
+            string Query = "Select found = 1 from SERVICES where ServiceName = @ServiceName";
+            SqlCommand command = new SqlCommand(Query, con);
+            command.Parameters.AddWithValue("@ServiceName", ServiceName);
+            bool isFound = false;
             try
             {
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows) dataTable.Load(reader);
+                isFound = reader.HasRows;
                 reader.Close();
             }
             catch (Exception) { }
             finally { con.Close(); }
-
-            return dataTable;
+            return isFound;
         }
+
+
     }
 }
+

@@ -3,7 +3,10 @@
   "WorkspaceRootPath": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\Wedding-Condolence-etc  Hall Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B29215E-7B47-412D-9906-EED285E71242}|..\\DataAccess\\DataAccess.csproj|d:\\coding files\\projects\\tiny project.friends\\tiny-project.friends\\src\\dataaccess\\custmersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\DataAccess\\MaterialTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\DataAccess\\CustmersRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,15 +33,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MaterialTable.cs",
+              "DocumentMoniker": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\DataAccess\\MaterialTable.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\MaterialTable.cs",
+              "ToolTip": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\DataAccess\\MaterialTable.cs",
+              "RelativeToolTip": "..\\DataAccess\\MaterialTable.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-05T14:44:39.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CustmersRepository.cs",
               "DocumentMoniker": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\DataAccess\\CustmersRepository.cs",
               "RelativeDocumentMoniker": "..\\DataAccess\\CustmersRepository.cs",
               "ToolTip": "D:\\coding files\\Projects\\Tiny Project.Friends\\Tiny-Project.Friends\\src\\DataAccess\\CustmersRepository.cs",
               "RelativeToolTip": "..\\DataAccess\\CustmersRepository.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAgAAABzAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAgAAABzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T05:29:42.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-02T05:29:42.81Z"
             }
           ]
         }
