@@ -6,7 +6,7 @@ namespace DataAccess.Repositories
 {
     public class CustomersRepository
     {
-        private static string connectionString = "Server = .;Database = Hall_Booking;User Id = sa; Password = 123456;";
+        private static string connectionString = DBHelper.connectionString;
 
         public static int AddNewCustomer(string FullName, string Phone, string Notes)
         {
