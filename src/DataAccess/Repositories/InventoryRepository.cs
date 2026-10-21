@@ -6,7 +6,8 @@ namespace DataAccess.Repositories
 {
     public class InventoryRepository
     {
-        private static string connectionString = "Server = .;Database=Hall_Booking;User Id = sa ;Password =123456;";
+         private static string connectionString = DBHelper.connectionString;
+
         public static bool AddNewMaterialToInventory(int MaterialID, int InitialQuantity = 0)
         {
             bool isAdd = false;
