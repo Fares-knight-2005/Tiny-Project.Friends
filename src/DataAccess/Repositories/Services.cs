@@ -8,9 +8,9 @@ namespace DataAccess.Repositories.Services.Services
 {
     public class Status
     {
-        private static string connectionString = "Server = .;Database = [DBName];User Id = sa; Password = 123456;";
+        private static string connectionString = DBHelper.connectionString;
 
-        public static int AddNewService(string ServiceName , float ServicePrice)
+        public static int AddNewService(string ServiceName, float ServicePrice)
         {
             int ID = -1;
             SqlConnection con = new SqlConnection(connectionString);
