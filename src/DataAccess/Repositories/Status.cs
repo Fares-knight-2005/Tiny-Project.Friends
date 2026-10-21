@@ -6,7 +6,7 @@ namespace DataAccess.Repositories
 {
     public class Status
     {
-        private static string connectionString = "Server = .;Database = Hall_Booking;User Id = sa; Password = 123456;";
+        private static string connectionString = DataAccess.DBHelper.connectionString;
 
         public static int AddNewStatus (string StatusName)
         {
