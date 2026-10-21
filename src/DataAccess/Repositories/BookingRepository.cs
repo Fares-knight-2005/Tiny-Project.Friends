@@ -6,7 +6,7 @@ namespace DataAccess.Repositories
 {
     public class Booking
     {
-        private static string connectionString = "Server = .;Database = Hall_Booking;User Id = sa; Password = 123456;";
+        private static string connectionString = DBHelper.connectionString;
 
         public static int AddNewBooking(int CustomerID, DateTime EventDate, TimeSpan StartTime, decimal DurationHours, int TypeID, int StatusID, string Description, decimal TotalPrice, decimal PaidPrice, decimal PaidAmount, DateTime CreatedAt)
         {
