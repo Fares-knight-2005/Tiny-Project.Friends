@@ -6,7 +6,7 @@ using Microsoft.Data.SqlClient;
 
 namespace DataAccess.Repositories.Services.Services
 {
-    public class Status
+    public class Services
     {
         private static string connectionString = DBHelper.connectionString;
 
