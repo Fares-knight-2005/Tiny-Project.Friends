@@ -64,7 +64,6 @@ namespace Business
             return false;
         }
 
-        // Delete
         public static bool DeleteService(int ServiceID)
         {
             return DataAccess.Repositories.Services.Services.Services
