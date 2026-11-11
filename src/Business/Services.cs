@@ -70,12 +70,7 @@ namespace Business
             return DataAccess.Repositories.Services.Services.Services
                 .DeleteService(ServiceID);
         }
-
-        public bool Delete()
-        {
-            return DeleteService(ServiceID);
-        }
-
+        
         public static DataTable GetAllServices()
         {
             return DataAccess.Repositories.Services.Services.Services
