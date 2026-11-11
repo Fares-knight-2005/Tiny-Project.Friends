@@ -4,7 +4,7 @@ using Microsoft.Data.SqlClient;
 
 namespace DataAccess.Repositories
 {
-    public class Status
+    public class StatusRepository
     {
         private static string connectionString = DataAccess.DBHelper.connectionString;
 
@@ -123,6 +123,29 @@ namespace DataAccess.Repositories
             return isFound;
         }
 
+
+        public static bool FindStatusByStatusID(int StatusID, ref string FullName)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            string query = "Select * from Status where StatusID = @StatusID";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@StatusID", StatusID);
+            bool isFound = false;
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    isFound = true;
+                    FullName = (string)reader["FullName"];
+                }
+                reader.Close();
+            }
+            catch (Exception) { }
+            finally { conn.Close(); }
+            return isFound;
+        }
 
     }
 }
