@@ -28,16 +28,14 @@ namespace Business
         }
         private bool _AddNewService()
         {
-            ServiceID = DataAccess.Repositories.Services.Services.Services
-                .AddNewService(ServiceName, ServicePrice);
+            ServiceID = DataAccess.Repositories.Services.Services.Services.AddNewService(ServiceName, ServicePrice);
 
             return ServiceID != -1;
         }
 
         private bool _UpdateService()
         {
-            return DataAccess.Repositories.Services.Services.Services
-                .UpdateService(ServiceID, ServiceName, ServicePrice);
+            return DataAccess.Repositories.Services.Services.Services.UpdateService(ServiceID, ServiceName, ServicePrice);
         }
         
         public bool Save()
@@ -57,35 +55,29 @@ namespace Business
                     }
 
                 case enMode.Update:
-
                     return _UpdateService();
             }
-
             return false;
         }
 
         public static bool DeleteService(int ServiceID)
         {
-            return DataAccess.Repositories.Services.Services.Services
-                .DeleteService(ServiceID);
+            return DataAccess.Repositories.Services.Services.Services.DeleteService(ServiceID);
         }
         
         public static DataTable GetAllServices()
         {
-            return DataAccess.Repositories.Services.Services.Services
-                .GetAllServices();
+            return DataAccess.Repositories.Services.Services.Services.GetAllServices();
         }
 
         public static bool IsServiceExist(int ServiceID)
         {
-            return DataAccess.Repositories.Services.Services.Services
-                .IsServiceExistByServiceID(ServiceID);
+            return DataAccess.Repositories.Services.Services.Services.IsServiceExistByServiceID(ServiceID);
         }
 
         public static bool IsServiceExist(string ServiceName)
         {
-            return DataAccess.Repositories.Services.Services.Services
-                .IsServiceExistByName(ServiceName);
+            return DataAccess.Repositories.Services.Services.Services.IsServiceExistByName(ServiceName);
         }
     }
 }
